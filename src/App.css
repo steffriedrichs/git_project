@@ -1,0 +1,125 @@
+/* general classes */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.appContainer{
+  text-align: center;
+}
+.title{
+  background: #eb7f00;
+  padding: 1.5% 0%;
+  color: white;
+}
+
+/* keyboard classes */
+.keyboardContainer{
+  background:black;
+  width: 90%;
+  margin: 5%;
+  padding: 1% 1% 0.5% 1%;
+  height: 170px;
+  position: relative;
+  border-radius: 3px 3px 3px 3px;
+}
+.whiteKeysContainer{
+  width: 90%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+  position: fixed;
+}
+.blackKeysContainer{
+  width: 88.2%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 20;
+  position: fixed;
+  padding: 0% 0.9%;
+}
+.whiteKey{
+  background: white;
+  width: 1.8%; 
+  height: 98%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 0px 0px 3px 3px;
+}
+.whiteKey:hover{
+  background: #eeb16c;
+}
+/* 51 black keys, including 'ghosts' */
+.blackKey{
+  background: black;
+  width: 1.4%;
+  height: 100%;
+  margin-bottom: 1%;
+  border-radius: 0px 0px 2px 2px;
+}
+.blackKey:hover{
+  background:#a35801;
+}
+.fillerKey{
+  background: rgba(17, 11, 11, 0);
+  width: 1.4%;
+  height: 66%;
+  margin-bottom: 1%;
+  border-radius: 0px 0px 2px 2px;
+}
+
+/* recorder classes */
+.recorderContainer{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 1% 5%; 
+}
+.recorderLeft{
+  width: 50%;
+}
+.recorderRight{
+  width: 50%;
+}
+.buttonsContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aroundIcon{
+  background:rgb(245, 237, 233);
+  border-radius: 2px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #d4cfc4;
+  margin: 1% 1%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recordingStart{
+  background: red;
+  border-radius: 20px;
+  height: 20px;
+  width: 20px;
+}
+.recordingStop{
+  background: rgb(53, 52, 52);
+  border-radius: 3px;
+  height: 20px;
+  width: 20px;
+}
+
+.clickSavedSong{
+  color: black;
+  width: 100%;
+  text-decoration: none;
+}
+.clickSavedSong:hover{
+  color:#eb7f00;
+}
