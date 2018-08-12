@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Keyboard from './Keyboard';
-import Recorder from './Recorder';
+import Keyboard from './Keyboard/index';
+import Recorder from './Recorder/index';
 import './App.css';
 
 class App extends Component {
@@ -10,10 +10,7 @@ class App extends Component {
     this.state = {
       recording: false,
       currentSong: [],
-      recordedSongs: [{
-        keys: [],
-        name: ""
-      }], 
+      recordedSongs: [],
       displayForm: false,
       renderSound: true
     };
@@ -35,12 +32,9 @@ class App extends Component {
     this.state.recording ? 
       this.setState(state => {
         currentSong: this.state.currentSong.push(keyPlayed);
-        renderSound: false
       })   
     : 
-    this.setState(state => {
-      renderSound: false
-    }) 
+    null
   }  
 
   // set recording to inactive and ask user for songtitle
@@ -65,13 +59,6 @@ class App extends Component {
     }));
   }
 
-  // play a saved song
-  handleSongPlayback(sounds){
-    this.setState(state => ({
-      playback: true
-    }));
-  }
-
   render() {
     return (
       <div className="appContainer">
@@ -79,15 +66,18 @@ class App extends Component {
           <h1> Steffi's React Piano</h1>
           <h2> Play a song! </h2>
         </div> 
-        <Keyboard
-          onRecording   = {(key) => this.handleSongRecording(key)}
-          renderSound   = {this.state.renderSound}
-        />
+        <div className="keyboardWrapper">
+          <Keyboard
+            onRecording   = {(key) => this.handleSongRecording(key)}
+            renderSound   = {this.state.renderSound}
+          />
+        </div>
         <Recorder 
-          onStartClick  = {(start) => this.handleStartClick(start)}
-          onStopClick   = {(stop)  => this.handleStopClick(stop)}
-          recordedSongs = {this.state.recordedSongs}
-          displayForm   = {this.state.displayForm}
+          onStartClick   = {(start) => this.handleStartClick(start)}
+          onStopClick    = {(stop)  => this.handleStopClick(stop)}
+          recordingState = {this.state.recording}
+          recordedSongs  = {this.state.recordedSongs}
+          displayForm    = {this.state.displayForm}
           handleSongNameSubmit = {this.handleSongNameSubmit}
         />
       </div>
