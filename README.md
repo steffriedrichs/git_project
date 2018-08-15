@@ -1,10 +1,11 @@
-## Start Application
+## React Piano
 
-In the project directory, you can run:
+this application allows you to play the piano in your browser!
 
-### `npm start`
+I simulates all 88 black and white keys of a piano keyboard with their corresponding sounds. 
+Songs may not only be played in the application, but also be recorded and replayed. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Live version available here: 
 
+https://shrouded-hollows-43628.herokuapp.com/
 
