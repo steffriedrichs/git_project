@@ -1,6 +1,9 @@
 ## React Piano
 
-this application allows you to play the piano in your browser. I simulates all 88 black and white keys of a real piano and allows you not only to play but also record and replay yor favorite songs. 
+this application allows you to play the piano in your browser!
+
+I simulates all 88 black and white keys of a piano keyboard with their corresponding sounds. 
+Songs may not only be played in the application, but also be recorded and replayed. 
 
 Live version available here: 
 
